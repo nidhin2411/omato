@@ -1,0 +1,1116 @@
+*{
+    box-sizing: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+body{
+    margin:0;
+    width: 100%;
+    background-color: white;
+    font-family: Okra, Helvetica, sans-serif;
+    font-size: 62.5%;
+    font-weight: 300;
+    box-sizing: border-box;
+}
+.container{
+    width: 85%;
+    margin: auto;
+
+}
+.image-container{
+    position:relative;
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+}
+.image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    
+
+}
+.header-body-section{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: whitesmoke;
+    
+
+}
+.nav{
+    font-weight: 550;
+    height:50px ;
+
+
+}
+.header{
+    position: relative;
+    height: 420px;
+
+
+
+}
+.container-nav{
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    color:whitesmoke;
+}
+.logo-container{
+    display: flex;
+    align-items:center ;
+
+}.logo-container p{
+    padding: 5px;
+
+}
+.nav ul{
+    list-style: none;
+    display: flex;
+
+}.nav ul li{
+    padding: 10px;
+    padding-left: 3px;
+    margin-right: 25px;
+    font-size: 20px;
+    font-weight: 300;
+
+}
+.nav ul li a{
+    color: inherit;
+    text-decoration:none ;
+}
+.zomato-logo{
+    width: 300px;
+
+}
+.container-header-body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 360px;
+    flex-direction: column;
+    
+}.header-body-content{
+    position: relative;
+    top:-50%;
+
+}
+.header-body-section-discover{
+ font-size:32px;
+ margin:20px;
+ margin-left: 0px;
+ padding: 25px;
+text-align: center;
+font-family: Okra, Helvetica, sans-serif;
+
+}
+.search-container{
+    background-color:white;
+    width: 500px;
+    height: 55px;
+    max-width: 750px;
+    border-radius: 5px;
+    align-items: center;
+    padding: 7px;
+    color: black;
+    
+
+
+}
+.citeis{
+    position: relative;
+    max-width: 100%;
+    max-height: initial;
+    margin: 0px auto;
+}
+.locations-head{
+    width: 100%;
+    display: flex;
+    margin-top: 64px;
+    -webkit-box-pack: center;
+    justify-content: center;
+
+}.popular-loc h2{
+    font-size: 40px;
+    line-height: 1.2;
+    font-weight: 50;
+    color: rgb(28, 28, 28);
+    margin: 0px; 
+    font-family: Okra, Helvetica, sans-serif;
+}
+.india{
+  
+    height: 100%;
+    object-fit: contain;
+    transform: none;
+    opacity: 1;
+    will-change: transform, opacity;
+    border-radius: inherit;
+    filter: unset;
+    transition: opacity 0.25s ease 0s, transform 0.25s ease 0s;
+}
+.flag{
+    margin-left: 15px;
+
+}
+.country-india {
+    font-size: 40px;
+    padding-left: 15px;
+   
+    line-height: 1.2;
+    color: rgb(28, 28, 28);
+    margin: 0px;
+    font-family: Okra, Helvetica, sans-serif;
+}
+.country-india h2{
+    font-weight: 500;
+}
+.country-description{
+    margin-top: 64px;
+    text-align: center;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+.description{
+    margin: 0px;
+    max-width: 1440px;
+    font-size: 32px;
+    line-height: 150%;
+    color: rgb(105, 105, 105);
+    
+}
+p{
+
+    display: block;
+    margin-block-start: 16px;
+    margin-block-end: 16px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+
+}
+.state-names{
+    width: 1440px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+   margin-left: 110px;
+   padding-left: 40px;
+   align-items: center;
+   padding-top:50px;
+   
+}
+.text{
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    
+}
+h5{
+    font-size: 25px;
+    line-height: 1.2;
+    font-weight: 300;
+    color: rgb(28, 28, 28);
+    margin: 0px;
+}
+
+.city-agra{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.5%;
+    padding: 0px 13.3333px 20px 0px;
+    float: left;
+    
+}
+.city-ahmd{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding:0px 6.66667px 20px 6.66667px;
+
+
+}
+.city-ajmer{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    float: left;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 33.33%;
+    padding: 0px 0px 20px 13.3333px;
+
+}
+.city-alapuzha{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 0px 13.33px 20px 0px;
+    max-width: 32.33%;
+}
+.city-allahabad{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.66667px 20px 6.66667px;
+}
+.city-amravati{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 0px 20px 13.3333px;
+}
+.city-amritsar{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 13.3333px 20px 0px;
+
+
+}
+.city-aurangabad{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.66px 20px 6.6px;
+
+
+}
+.city-bengaluru{position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 0px 20px 12.3px;
+
+}
+.city-bhopal{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 1.6px 13.3px 20px 12px;
+
+
+}
+.city-bhubaneshwar{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.1%;
+    padding: 0px 6.66px 20px 6.66px;
+
+
+}
+.city-chandigarh{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 0px 20px 12.1px;
+
+}
+.city-chennai{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 1.6px 13.33px 20px 12px;
+
+}
+.city-coimbatore{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.66px 20px 6.66px;
+
+}
+.city-cutack{position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 0px 20px 12.3px;
+
+
+}
+.city-darjeeling{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 1.6px 13.3px 20px 10px;
+    
+}
+
+.city-dehradun{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.2%;
+    padding: 1.6px 6.66px 20px 6.66px;
+    
+}
+.city-dharamsala{position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 1.6px 12.5px 20px 10px;
+    
+}
+.city-gangtok{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 1.6px 6px 20px 12px;
+    
+}
+.city-goa{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.2%;
+    padding: 0px 0px 20px 13.1px;
+
+    
+}
+.city-gorakhpur{position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 13.2px 20px 15px;
+    
+}
+.city-guntur{position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.6px 20px 12px;
+
+}
+
+.city-Guwahati{position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 10px 20px 13.2px;
+    
+}
+
+.city-gwalior{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 13.2px 20px 1.8px;
+}
+.city-haridwar{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.66px 20px 12px;
+}
+.city-hyderabad{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 0px 20px 13.3px;
+    
+}
+.square{
+    padding: 2rem 2.4rem;
+    border-radius: 0.8rem;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(232, 232, 232);
+    margin-bottom: 1.5rem;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+    
+}
+.city-indore{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 12.8px 20px  12px;
+    
+}
+
+.city-jabalpur{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.6px 20px 12px;
+    
+}
+.city-jaipur{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.66px 20px 12px;
+    
+}
+
+.city-jalandar{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.6px 20px 12px;
+    
+}
+
+.city-jammu{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.6px 20px 12px;
+    
+}
+.city-jamnagar{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 0px 20px 12.3px;   
+}
+
+.city-jamshadpur{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.6px 20px 12px;
+    
+}
+.city-jhansi{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.6px 20px 12px;
+    
+}
+.city-jodhpur{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 0px 20px 12px;
+    
+}
+.city-kanpur{position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.66px 20px 12.3px;
+    
+}
+.city-khamagaon{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.6px 20px 12px;
+
+    
+}
+.city-kochi{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 0px 20px 12px;
+    
+    
+}
+.city-kolhapur{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.6px 20px 12px;
+
+    
+}
+.city-kolkata{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.6px 20px 12px;
+
+}
+.city-lucknow{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 0px 20px 12px;
+    
+}
+.city-ludhiana{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.6px 20px 12px;
+    
+}
+.city-madurai{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.6px 20px 12px;
+    
+}
+.city-manali{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding:  0px 0px 20px 12px;
+}
+.city-manglore{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.6px 20px 12px;
+
+    
+}
+.city-manipal{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding:  0px 0px 20px 12px;
+
+}.city-mumbai{
+    
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 0px 20px 12px;
+}
+.city-mussoorie{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.6px 20px 12px;
+    
+}.city-mysore{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.6px 20px 12px;
+    
+}
+.city-nagpur{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 0px 20px 12px;
+    
+}
+.city-nainital{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.6px 20px 12px;
+    
+}
+.city-nashik{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.6px 20px 12px;
+    
+}
+.city-ooty{
+    
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 0px 20px 12px;
+}
+.city-palakad{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding:  0px 6.6px 20px 12px;
+}
+.city-patiala{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.6px 20px 12px;
+}
+.city-patna{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 0px 20px 12px;
+    
+}
+.city-puducherry{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.6px 20px 12px;
+}
+.city-pune{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.6px 20px 12px;
+}
+.city-raipur{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 0px 20px 12px;
+    
+}
+.city-rajkot{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.6px 20px 12px;
+    
+}
+.city-ranchi{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.6px 20px 12px;
+}
+.city-rishikesh{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 0px 20px 12px;
+    
+}
+.city-salem{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding:0px 6.6px 20px 12px;
+    
+}
+.city-shimla{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.6px 20px 12px;
+    
+}
+.city-siliguri{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 0px 20px 12px;
+}
+.city-srinagar{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.6px 20px 12px;
+    
+}
+.city-surat{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.6px 20px 12px;
+    
+}
+.city-thrissur{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 0px 20px 12px;
+    
+}
+.city-tirupati{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.6px 20px 12px;
+
+    
+}
+.city-trichy{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 0px 20px 12px;
+
+}
+.city-trivandrum{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 0px 20px 12px;
+}
+.city-udaipur{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.6px 20px 12px;
+}
+.city-vadodara{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 0px 20px 12px
+}
+.city-varanasi{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 0px 20px 12px;
+
+}
+.city-vellore{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 6.6px 20px 12px;
+}
+.city-vijayawada{
+
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding:  0px 0px 20px 12px
+}
+.city-visakhapatnam{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 32.3%;
+    padding: 0px 0px 20px 12px;
+}
+.zom{
+    width: 100%;
+    background: rgb(248, 248, 248);
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+.company-details{
+    max-width: 1760px;
+    width: 1760px;
+    padding: 76.8px 0px 35.2px;
+    position: relative;
+}
+.top-area{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 64px;
+
+}
+.footer-logo{
+    height: 44.8px;
+    width: 211.2px;
+}
+img{
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+.space-after-logo{
+    margin-top: 19.2px;
+
+}
+.country-language{
+    display: flex;
+}
+.india-flag{
+    max-width: 100%;
+    height: 40px;
+}
+
+.flag{
+    max-width:auto;
+    height: auto;
+
+}
+.company-footer{
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.about{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 18.3333%;
+    padding: 0px;
+
+}
+.verse{
+    font-size: 1.4rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 0px 0px 1.2rem;
+
+}
+.zomverse{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 19.1667%;
+    padding: 0px;
+}
+.for{position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 25%;
+    padding: 0px;
+
+}
+.learn{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 16.6667%;
+    padding: 0px;
+}
+h5{
+    margin-top: 5rem;
+    border-width: 1px 0px 0px;
+    border-right-style: initial;
+    border-bottom-style: initial;
+    border-left-style: initial;
+    border-right-color: initial;
+    border-bottom-color: initial;
+    border-left-color: initial;
+    border-image: initial;
+    border-top-style: solid;
+    border-top-color: rgb(207, 207, 207);
+}
+p{
+    font-size: 16px;
+    font: bold;
+}

@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato</title>
+    <link rel="icon" href="data:image/png;base64,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">
+    <link rel="stylesheet" href="zomato.css" type="text/css">
+
+</head>
+<heder> 
+    <div class="image-container">
+        <img src="https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png" alt=""> 
+    </div>
+    <div class="header-body-section">
+
+        <nav class="nav">
+            <div class="container container-nav">
+                <div class="logo-container">
+                   
+                </div>
+                <ul>
+                    <li><a href="restaurent">Add Restaurents</a></li>
+                    <li><a href="login">Log in</a> </li>
+                    <li><a href="signup">Sign Up</a> </li>
+    
+                </ul>
+    
+            </div>
+        </nav>
+        <div class="header-body-content">
+            <div class="container container-header-body">
+                <img class="zomato-logo" src="https://b.zmtcdn.com/web_assets/8313a97515fcb0447d2d77c276532a511583262271.png">
+                <p class="header-body-section-discover" >Find the best restaurants, cafés <br>and bars in India</p>
+                
+                </div>
+            </div>
+            
+    
+        </div>
+    </div>
+    
+</heder>
+
+
+<body>
+    <div class="cities">
+        <div class="locations-head">
+            <div class="popular-loc"><h2>Popular locations in</h2></div>
+            <div class="india">
+                <img src="https://b.zmtcdn.com/images/flags_z10/in.png?output-format=webp" class="flag">
+            </div>
+            <h2 class="country-india">India</h2>
+        </div>
+        <div class="country-description">
+            <p class="description">From swanky upscale restaurants to the cosiest hidden gems serving the most incredible food, Zomato covers it all. Explore menus, and millions of restaurant photos and reviews from users just like you, to find your next great meal.</p>
+        
+        </div>
+        <div class="states-container">
+            <div>
+                <div class="state-names">
+                    <div class="city-agra">
+                        <a href="https://www.zomato.com/agra">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="agra-restaurents">Agra Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-ahmd">
+                        <a href="https://www.zomato.com/ahmedabad">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="ahmedabad-resto">Ahmedabad Restaurents</h5>
+
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-ajmer">
+                        <a href="https://www.zomato.com/ajmer">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="ajmer-resto">Ajmer Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-alapuzha">
+                        <a href="https://www.zomato.com/alappuzha">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="alapuzha-resto">Alapuzha Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-allahabad">
+                        <a href="https://www.zomato.com/allahabad">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="allahabad-resto">Allahabad Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-amravati">
+                        <a href="https://www.zomato.com/amravati">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="amravati-resto">Amravati Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-amritsar">
+                        <a href="https://www.zomato.com/amritsar">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="amritsar-resto">Amritsar Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-aurangabad">
+                        <a href="https://www.zomato.com/aurangabad">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="aurangabad-resto">Aurangabad Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-bengaluru">
+                        <a href="https://www.zomato.com/bangalore">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="bengaluru-resto">Bengaluru Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-bhopal">
+                        <a href="https://www.zomato.com/bhopal">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="Bhopal-resto">Bhopal Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-bhubaneshwar">
+                        <a href="https://www.zomato.com/bhubaneswar">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="bhubaneshwar-resto">Bhubaneshwar Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-chandigarh">
+                        <a href="https://www.zomato.com/chandigarh">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="chandigarh-resto">Chandigarh Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-chennai">
+                        <a href="https://www.zomato.com/chennai">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="chennai-resto">Chennai Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-coimbatore">
+                        <a href="https://www.zomato.com/coimbatore">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="coimbatore-resto">Coimbatore Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-cutack">
+                        <a href="https://www.zomato.com/cuttack">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="cutack-resto">Cutack Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-darjeeling">
+                        <a href="https://www.zomato.com/darjeeling">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="darjeeling-resto">Darjeeling Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-dehradun">
+                        <a href="https://www.zomato.com/dehradun">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="dehradun-resto">Dehradun Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-dharamsala">
+                        <a href="https://www.zomato.com/dharamshala">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="resto">Dharamsala Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-gangtok">
+                        <a href="https://www.zomato.com/gangtok">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="gangtok-resto">Gangtok Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-goa">
+                        <a href="https://www.zomato.com/goa">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="goa-resto">Goa Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-gorakhpur">
+                        <a href="https://www.zomato.com/gorakhpur">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="gorakhpur-resto">Gorakhpur Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-guntur">
+                        <a href="https://www.zomato.com/guntur">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="guntur-resto">Guntur Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-Guwahati">
+                        <a href="https://www.zomato.com/guwahati">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="Guwahati-resto">Guwahati Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-gwalior">
+                        <a href="https://www.zomato.com/gwalior">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="gwalior-resto">Gwalior Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-haridwar">
+                        <a href="https://www.zomato.com/haridwar">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="haridwar-resto">haridwar Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-hyderabad">
+                        <a href="https://www.zomato.com/hyderabad">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="hyderabad-resto">Hyderabad Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-indore">
+                        <a href="https://www.zomato.com/indore">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="indore-resto">Indore Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-jabalpur">
+                        <a href="https://www.zomato.com/jabalpur">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="jabalpur-resto">Jabalpur Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-jaipur">
+                        <a href="https://www.zomato.com/jaipur">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="jaipur-resto">Jaipur Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-jalandar">
+                        <a href="https://www.zomato.com/jalandhar">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="jalandar-resto">Jalandar Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-jammu">
+                        <a href="https://www.zomato.com/jammu">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="jammu-resto">Jammu Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-jamnagar">
+                        <a href="https://www.zomato.com/jamnagar">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="jamnagar-resto">Jamnagar Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-jamshadpur">
+                        <a href="https://www.zomato.com/jamshedpur">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="jamshadpur-resto">Jamshadpur Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-jhansi">
+                        <a href="https://www.zomato.com/jhansi">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="jhansi-resto">Jhansi Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-jodhpur">
+                        <a href="https://www.zomato.com/jodhpur">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="jodhpur-resto">Jodhpur Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-kanpur">
+                        <a href="https://www.zomato.com/kanpur">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="kanpur-resto">Kanpur Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-khamagaon">
+                        <a href="https://www.zomato.com/khamgaon">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="khamagaon-resto">Khamagaon Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-kochi">
+                        <a href="https://www.zomato.com/kochi">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="kochi-resto">Kochi Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-kolhapur">
+                        <a href="https://www.zomato.com/kolhapur">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="kolhapur-resto">Kolhapur Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-kolkata">
+                        <a href="https://www.zomato.com/kolkata">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="kolkata-resto">Kolkata Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-lucknow">
+                        <a href="https://www.zomato.com/lucknow">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="lucknow-resto">Lucknow Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-ludhiana">
+                        <a href="https://www.zomato.com/ludhiana">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="ludhiana-resto">Ludhiana Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-madurai">
+                        <a href="">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="madurai-resto">Madurai Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-manali">
+                        <a href="https://www.zomato.com/manali">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="manali-resto">Manali Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-manglore">
+                        <a href="https://www.zomato.com/mangalore">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="manglore-resto">Manglore Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-manipal">
+                        <a href="https://www.zomato.com/manipal">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="manipal-resto">Manipal Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-mumbai">
+                        <a href="https://www.zomato.com/mumbai">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="mumbai-resto">Mumbai Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-mussoorie">
+                        <a href="https://www.zomato.com/mussoorie">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="mussoorie-resto">Mussoorie Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-mysore">
+                        <a href="https://www.zomato.com/mysore">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="mysore-resto">Mysore Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-nagpur">
+                        <a href="https://www.zomato.com/nagpur">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="nagpur-resto">Nagpur Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-nainital">
+                        <a href="https://www.zomato.com/nainital">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="nashik-resto">Nainital Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-nashik">
+                        <a href="https://www.zomato.com/nashik">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="nashik-resto">Nashik Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-ooty">
+                        <a href="https://www.zomato.com/ooty">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="nashik-resto">Ooty Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-palakad">
+                        <a href="https://www.zomato.com/palakkad">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="nashik-resto">Palakad Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-patiala">
+                        <a href="https://www.zomato.com/patiala">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="nashik-resto">Patiala Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-patna">
+                        <a href="https://www.zomato.com/patna">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="nashik-resto">Patna Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-puducherry">
+                        <a href="https://www.zomato.com/puducherry">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="nashik-resto">Puducherry Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-pune">
+                        <a href="https://www.zomato.com/pune">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="nashik-resto">Pune Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-raipur">
+                        <a href="https://www.zomato.com/raipur">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="nashik-resto">Raipur Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-rajkot">
+                        <a href="https://www.zomato.com/rajkot">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="nashik-resto">Rajkot Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-ranchi">
+                        <a href="https://www.zomato.com/ranchi">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="nashik-resto">Ranchi Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-rishikesh">
+                        <a href="https://www.zomato.com/rishikesh">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="nashik-resto">Rishikesh Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-salem">
+                        <a href="https://www.zomato.com/salem">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="nashik-resto">Salem Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-shimla">
+                        <a href="https://www.zomato.com/shimla">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="nashik-resto">Shimla Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-siliguri">
+                        <a href="https://www.zomato.com/siliguri">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="nashik-resto">Siliguri Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-srinagar">
+                        <a href="https://www.zomato.com/srinagar">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="nashik-resto">Srinagar Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-surat">
+                        <a href="https://www.zomato.com/surat">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="nashik-resto">Surat Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-thrissur">
+                        <a href="https://www.zomato.com/thrissur">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="nashik-resto">Thrissur Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-tirupati">
+                        <a href="https://www.zomato.com/tirupati">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="nashik-resto">Tirupati Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-trichy">
+                        <a href="https://www.zomato.com/trichy">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="nashik-resto">Trichy Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-trivandrum">
+                        <a href="https://www.zomato.com/trivandrum">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="nashik-resto">Trivandrum Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-udaipur">
+                        <a href="https://www.zomato.com/udaipur">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="nashik-resto">Udaipur Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-vadodara">
+                        <a href="https://www.zomato.com/vadodara">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="nashik-resto">Vadodara Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-varanasi">
+                        <a href="https://www.zomato.com/varanasi">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="nashik-resto">Varanasi Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-vellore">
+                        <a href="https://www.zomato.com/vellore">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="nashik-resto">Vellore Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-vijayawada">
+                        <a href="https://www.zomato.com/vijayawada">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="nashik-resto">Vijayawada Restaurents</h5>
+                                </div> 
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="city-visakhapatnam">
+                        <a href="https://www.zomato.com/visakhapatnam">
+                            <div class="square">
+                                <div class="text">
+                                    <h5 class="nashik-resto">Visakhapatnam Restaurents</h5>
+                                </div>
+                                <div class="place-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 jKmKoK default_pointer_cs"><title>chevron-right</title><path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z" class="default_pointer_cs"></path></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    
+                  
+                </div>
+            </div>
+        </div>
+
+
+
+        </div>
+
+
+
+    </div>
+    <footer class="zom">
+        <div class="company-details">
+            <section class="top-area">
+                <img src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png?fit=around|198:42&crop=198:42;*,*">
+                <div class="blank-space">
+
+                </div>
+                <section class="country-languge">
+                    <div class="india-flag">
+                    <img src=>
+                    
+                </div>
+                </section>
+            </section>
+        </div>
+            <div class="company-footer">
+                <div class="about">
+                    <h5 class="verse">About Zomato</h5>
+                    <p >Who We Are<br></p>
+                    <p>Blog<br></p>
+                    <p>Work With Us<br></p>
+                    <p>Investor Relations<br></p>
+                    <p>Report Fraud<br></p>
+                    <p>Press Kit<br></p>
+                    <p>Conntact Us<br></p>
+                </div>
+                <div class="zomverse">
+                    <h5 class="verse">ZOMAVERSE</h5>
+                    <p>Zomato<br></p>
+                    <p>Blinkit<br></p>
+                    <p>Feeding India<br></p>
+                    <p>Hyperpue<br></p>
+                    <p>Zomaland<br></p>
+                    
+                </div>
+                <div class="for">
+                    <h5 class="verse">FOR RESTAURENT</h5>
+                    <p>Partner With Us<br></p>
+                    <p>Apps For You<br></p>
+                </div>
+                <div class="learn">
+                    <h5 class="verse">LEARN MORE</h5>
+                    <p>Privacy<br</p>
+                    <p>Security<br</p>
+                    <p>Terms<br</p>
+                    <p>Sitemap<br</p>
+                </div>
+                <hr>
+            <p class="tale-end">By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2024 © Zomato™ Ltd. All rights reserved.</p>
+            </div>
+
+            
+
+
+        
+        
+
+    </footer>
+    
+</body>
+</html>
